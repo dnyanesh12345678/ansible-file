@@ -1,0 +1,9 @@
+- hosts: all
+  remote_user: ubuntu
+  become: yes
+  ignore_errors: yes
+  tasks:
+   - name: service ssh start
+     service:
+      name: ssh
+      state: restarted
